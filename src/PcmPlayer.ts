@@ -62,7 +62,7 @@ export class PcmPlayer {
     }
 
     await this.context.audioWorklet.addModule(
-      new URL('/assets/audio.worklet.js', import.meta.url),
+      new URL('./audio.worklet.js', import.meta.url),
     )
 
     this.worklet = new AudioWorkletNode(this.context, this.workletName, {
